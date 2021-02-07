@@ -7,7 +7,7 @@ def index(request):
 
     # Retrieve the list of existing buckets
     s3 = boto3.client('s3')
-    theBucket = s3.list_objects('to-do-list-cloud-images')
+    theBucket = s3.list_objects(Bucket='to-do-list-cloud-images')
     # response = s3.list_buckets()
     print('theBucket')
     print(theBucket)
