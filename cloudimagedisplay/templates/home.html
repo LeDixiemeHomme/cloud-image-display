@@ -3,12 +3,11 @@
 {% block content %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
-<p>test </p>
-    <p>{{image_url}}</p>
 
-    <img class="center"
-     src="https://to-do-list-cloud-images.s3.eu-west-3.amazonaws.com/{{image_url}}"
-     alt="{{url}}">
+    <h1>All pictures on the S3 bucket</h1>
 
+    {% for foo in bucket %}
+
+    {% endfor %}
 
 {% endblock %}
