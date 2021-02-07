@@ -7,7 +7,7 @@
     <h1>All pictures on the S3 bucket</h1>
 
     {% for foo in bucket %}
-
+        <p>{{ foo.Key }}</p>
     {% endfor %}
 
 {% endblock %}
