@@ -4,10 +4,14 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
 
-    <h1>All pictures on the S3 bucket</h1>
+    <h1>All pictures on the S3 bucket : to-do-list-cloud-images</h1>
 
     {% for foo in bucket %}
-        <p>{{ foo.Key }}</p>
+
+        <a href="http://15.236.202.213:8000/display/{{ foo.Key }}"><img class="thumb"
+         src="https://to-do-list-cloud-images.s3.eu-west-3.amazonaws.com/{{ foo.Key }}"
+         alt="{{ foo.Key }}"></a>
+
     {% endfor %}
 
 {% endblock %}

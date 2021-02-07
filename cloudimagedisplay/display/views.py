@@ -7,8 +7,9 @@ def index(request):
 
     # Retrieve the list of existing buckets
     s3 = boto3.client('s3')
-    response = s3.list_objects(Bucket='to-do-list-cloud-images')
-    # response = s3.list_buckets()
+
+    # allBuckets = s3.list_buckets()
+    allObjectsFromABucket = s3.list_objects(Bucket='to-do-list-cloud-images')
 
     # print('Existing objects:')
     # for bucket in response['Contents']:
@@ -22,7 +23,7 @@ def index(request):
     # for bucket in response['Buckets']:
     #     bucket = conn.get_bucket('bucket.Name', validate=False)
 
-    context = {'bucket': response['Contents']}
+    context = {'bucket': allObjectsFromABucket['Contents']}
     return render(request, "home.html", context)
 
 def display_view(request, url):

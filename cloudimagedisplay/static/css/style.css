@@ -5,4 +5,12 @@
   width: 50%;
   height: 50%;
 }
+
+.thumb {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: 30%;
+}
 body {background-color: #92a8d1;}
