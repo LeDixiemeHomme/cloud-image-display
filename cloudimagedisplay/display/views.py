@@ -12,7 +12,7 @@ def index(request):
     # Output the bucket names
     print('Existing buckets:')
     for bucket in response['Buckets']:
-        print(f'  {bucket["Name"]}')
+        print(bucket)
 
     # conn = S3Connection('AKIAIMOTKO2QJIH4LOPA', 'M8AR4oVL/8hYS9bXqbWQ9alCot6UWfWHwFfTzXDZ')
     # bucket = conn.get_bucket('arn:aws:s3:::to-do-list-cloud-images', validate=False)
